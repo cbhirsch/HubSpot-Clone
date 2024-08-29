@@ -1,0 +1,6 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>icons/contact_page_32dp_F0F5F9.png</file>
+    </qresource>
+</RCC>
