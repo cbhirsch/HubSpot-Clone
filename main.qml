@@ -16,36 +16,39 @@ Window {
         anchors.left: parent.left
         color: App.Theme.primary
         height: parent.height
-        width: 50
-        state: "collapsed"
+        width: isExpanded ? 150 : 50
 
-        states: [
-            State {
-                name: "collapsed"
-                PropertyChanges { target: sideBar; width: 50 }
-            },
-            State {
-                name: "expanded"
-                PropertyChanges { target: sideBar; width: 150 } // Add some padding
-            }
-        ]
+        property bool isExpanded: false
+        property string selectedItem: ""
+        property bool isSidebarHovered: false
+        property bool isAnyItemHovered: false
+        
 
-        transitions: Transition {
-            NumberAnimation { 
-                properties: "width"
-                duration: 200
+        Behavior on width {
+            NumberAnimation { duration: 200 }
+        }
+
+        Timer {
+            id: hoverTimer
+            interval: 50 // Short delay to prevent rapid toggling
+            onTriggered: {
+                sideBar.isExpanded = sideBar.isSidebarHovered || sideBar.isAnyItemHovered
             }
         }
 
-        MouseArea {
-            id: sideBarHoverArea
+         MouseArea {
             anchors.fill: parent
             hoverEnabled: true
-            onEntered: sideBar.state = "expanded"
-            onExited: sideBar.state = "collapsed"
+            onEntered: {
+                sideBar.isSidebarHovered = true
+                hoverTimer.restart()
+            }
+            onExited: {
+                sideBar.isSidebarHovered = false
+                hoverTimer.restart()
+            }
         }
 
-        
 
         ColumnLayout {
             id: sideBarContent
@@ -94,7 +97,7 @@ Window {
                     Text {
                         text: "CRM"
                         color: App.Theme.lightNeutral
-                        visible: sideBar.state === "expanded"
+                        visible: sideBar.isExpanded
                         anchors.verticalCenter: parent.verticalCenter
                     }
                 }
@@ -120,9 +123,22 @@ Window {
                 ]
                 delegate: Rectangle {
                     id: sideBarItem
-                    width: sideBar.width - 10
+                    Layout.fillWidth: true
                     height: 40
                     color: "transparent"
+
+                    Rectangle {
+                        anchors.fill: parent
+                        color: {
+                            if (modelData.text === sideBar.selectedItem) {
+                                return App.Theme.secondary
+                            } else if (itemMouseArea.containsMouse && sideBar.isExpanded) {
+                                return App.Theme.secondary
+                            } else {
+                                return "transparent"
+                            }
+                        }
+                    }
                     
                     Row {
                         spacing: 10
@@ -139,29 +155,25 @@ Window {
                         Text {
                             text: modelData.text
                             color: App.Theme.lightNeutral
-                            visible: sideBar.state === "expanded"
+                            visible: sideBar.isExpanded
                             anchors.verticalCenter: parent.verticalCenter
                         }
                     }
 
-                    states: [
-                        State {
-                            name: "hovered"
-                            PropertyChanges { target: sideBarItem; color: App.Theme.secondary }
-                        },
-                        State {
-                            name: "unhovered"
-                            PropertyChanges { target: sideBarItem; color: App.Theme.primary }
-                        },
-                        State {
-                            name: "selected"
-                            PropertyChanges { target: sideBarItem; color: App.Theme.secondary }
-                        }
-                    ]
-
                     MouseArea {
+                        id: itemMouseArea
                         anchors.fill: parent
+                        hoverEnabled: true
+                        onEntered: {
+                            sideBar.isAnyItemHovered = true
+                            hoverTimer.restart()
+                        }
+                        onExited: {
+                            sideBar.isAnyItemHovered = false
+                            hoverTimer.restart()
+                        }
                         onClicked: {
+                            sideBar.selectedItem = modelData.text
                             print(modelData.text + " clicked")
                         }
                     }
