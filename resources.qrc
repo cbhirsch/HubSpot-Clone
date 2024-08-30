@@ -2,5 +2,10 @@
 <RCC version="1.0">
     <qresource prefix="/">
         <file>icons/contact_page_32dp_F0F5F9.png</file>
+        <file>icons/grid_view_32dp_F0F5F9.png</file>
+        <file>icons/store_32dp_F0F5F9.png</file>
+        <file>icons/confirmation_number_32dp_F0F5F9.png</file>
+        <file>icons/monitoring_32dp_F0F5F9.png</file>
+        <file>icons/Hubspot_logo.png</file>
     </qresource>
 </RCC>
