@@ -115,6 +115,21 @@ Window {
                         }
                     }
 
+                    states: [
+                        State {
+                            name: "hovered"
+                            PropertyChanges { target: sideBarItem; color: App.Theme.secondary }
+                        },
+                        State {
+                            name: "unhovered"
+                            PropertyChanges { target: sideBarItem; color: App.Theme.primary }
+                        },
+                        State {
+                            name: "selected"
+                            PropertyChanges { target: sideBarItem; color: App.Theme.secondary }
+                        }
+                    ]
+
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
