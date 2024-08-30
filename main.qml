@@ -71,19 +71,48 @@ Window {
                         height: 24
                     }
                 }
+            }
+        
             Rectangle {
-                width: parent.width - 35
-                height: 0.5
-                color: App.Theme.lightNeutral
-                anchors.bottom: parent.bottom
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
+                id: crmDisplay
+                width: sideBar.width - 10
+                height: 40
+                color: "transparent"
 
+                Row {
+                    spacing: 10
+                    anchors.verticalCenter: parent.verticalCenter
+                    anchors.left: parent.left
+                    anchors.leftMargin: 10 //
+
+                    Image {
+                        source: "qrc:/icons/grid_view_32dp_F0F5F9.png"
+                        width: 24
+                        height: 24
+                    }
+
+                    Text {
+                        text: "CRM"
+                        color: App.Theme.lightNeutral
+                        visible: sideBar.state === "expanded"
+                        anchors.verticalCenter: parent.verticalCenter
+                    }
+                }
             }
+            Rectangle {
+                id: displayLine
+                width: sideBar.width - 30
+                height: 1
+                color: App.Theme.accent
+                anchors.left: parent.left
+                anchors.top: crmDisplay.bottom
+                anchors.leftMargin: 12
+                anchors.topMargin: 10
+            }
+            
 
             Repeater {
                 model: [
-                    { icon: "qrc:/icons/grid_view_32dp_F0F5F9.png", text: "CRM" },
                     { icon: "qrc:/icons/contact_page_32dp_F0F5F9.png", text: "Contacts" },
                     { icon: "qrc:/icons/store_32dp_F0F5F9.png", text: "Companies" },
                     { icon: "qrc:/icons/confirmation_number_32dp_F0F5F9.png", text: "tickets" },
