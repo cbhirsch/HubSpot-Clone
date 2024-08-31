@@ -153,11 +153,27 @@ Window {
                         }
 
                         Text {
+                            id: iconText
                             text: modelData.text
                             color: App.Theme.lightNeutral
                             visible: sideBar.isExpanded
                             anchors.verticalCenter: parent.verticalCenter
                         }
+
+                        Item {
+                            Layout.fillWidth: true
+                        }
+                    }
+
+                    Image {
+                        id: chevronIcon
+                        source: "qrc:/icons/chevron_right_32dp_F0F5F9.png"
+                        width: 24
+                        height: 24
+                        anchors.right: parent.right
+                        anchors.rightMargin: 10
+                        anchors.verticalCenter: parent.verticalCenter
+                        visible: itemMouseArea.containsMouse && sideBar.isExpanded
                     }
 
                     MouseArea {

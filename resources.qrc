@@ -7,5 +7,6 @@
         <file>icons/confirmation_number_32dp_F0F5F9.png</file>
         <file>icons/monitoring_32dp_F0F5F9.png</file>
         <file>icons/Hubspot_logo.png</file>
+        <file>icons/chevron_right_32dp_F0F5F9.png</file>
     </qresource>
 </RCC>
