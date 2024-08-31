@@ -118,7 +118,7 @@ Window {
                 model: [
                     { icon: "qrc:/icons/contact_page_32dp_F0F5F9.png", text: "Contacts" },
                     { icon: "qrc:/icons/store_32dp_F0F5F9.png", text: "Companies" },
-                    { icon: "qrc:/icons/confirmation_number_32dp_F0F5F9.png", text: "tickets" },
+                    { icon: "qrc:/icons/confirmation_number_32dp_F0F5F9.png", text: "Tickets" },
                     { icon: "qrc:/icons/monitoring_32dp_F0F5F9.png", text: "Reports" }
                 ]
                 delegate: Rectangle {
@@ -190,6 +190,7 @@ Window {
                         }
                         onClicked: {
                             sideBar.selectedItem = modelData.text
+                            appArea.loadPage(modelData.text)
                             print(modelData.text + " clicked")
                         }
                     }
@@ -216,5 +217,33 @@ Window {
         width: parent.width - sideBar.width + 10
         color: App.Theme.lightNeutral
         radius: 10 // Added rounded corners
+        Loader {
+            id: pageLoader
+            anchors.left: sideBar.right
+            anchors.top: topBar.bottom
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
+            source: "qrc:/Apps/Contacts.qml"
+        }
+
+        function loadPage(page) {
+            switch (page) {
+                case "Contacts":
+                    pageLoader.source = "qrc:/Apps/Contacts.qml"
+                    break
+                case "Companies":
+                    pageLoader.source = "qrc:/Apps/Companies.qml"
+                    break
+                case "Tickets":
+                    pageLoader.source = "qrc:/Apps/Tickets.qml"
+                    break
+                case "Reports":
+                    pageLoader.source = "qrc:/Apps/Reports.qml"
+                    break
+                default:
+                    console.log("Unknown page:", page)
+                    pageLoader.source = "qrc:/Apps/Contacts.qml" // Or set to a default page
+                }
+        }
     }
 }

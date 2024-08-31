@@ -3,6 +3,10 @@
         "main.py",
         "main.qml",
         "Theme.qml",
-        "resources.qrc"
+        "resources.qrc",
+        "Apps/Companies.qml",
+        "Apps/Contacts.qml",
+        "Apps/Reports.qml",
+        "Apps/Tickets.qml"
     ]
 }
