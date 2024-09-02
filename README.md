@@ -12,12 +12,8 @@ This project is a clone of Hubspot CRM. The end project will have a few custom f
 1. Clone the repository:
    ```bash
    git clone https://github.com/cbhirsch/HubSpot-Clone.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd <project-directory>
-   ```
-3. Install dependencies (if any):
+
+2. Install dependencies (if any):
    ```bash
    pip install -r requirements.txt
    ```
