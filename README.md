@@ -23,4 +23,4 @@ This project is a clone of Hubspot CRM. The end project will have a few custom f
    ```
 
 ## Usage
-To run the application, use the following command:
+run the main.py file
