@@ -1,12 +1,13 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 2.15
-import Themes as App
+import Themes 1.0 as Color  
+import Apps 1.0 as App
 
 Window {
     width: Screen.width
     height: Screen.height
-    color: App.Theme.primary
+    color: Color.Theme.primary
     visible: true
     title: qsTr("Demo")
 
@@ -14,7 +15,7 @@ Window {
         id: sideBar
         anchors.top: parent.top
         anchors.left: parent.left
-        color: App.Theme.primary
+        color: Color.Theme.primary
         height: parent.height
         width: isExpanded ? 150 : 50
 
@@ -96,7 +97,7 @@ Window {
 
                     Text {
                         text: "CRM"
-                        color: App.Theme.lightNeutral
+                        color: Color.Theme.lightNeutral
                         visible: sideBar.isExpanded
                         anchors.verticalCenter: parent.verticalCenter
                     }
@@ -106,7 +107,7 @@ Window {
                 id: displayLine
                 width: sideBar.width - 30
                 height: 1
-                color: App.Theme.accent
+                color: Color.Theme.accent
                 anchors.left: parent.left
                 anchors.top: crmDisplay.bottom
                 anchors.leftMargin: 12
@@ -131,9 +132,9 @@ Window {
                         anchors.fill: parent
                         color: {
                             if (modelData.text === sideBar.selectedItem) {
-                                return App.Theme.secondary
+                                return Color.Theme.secondary
                             } else if (itemMouseArea.containsMouse && sideBar.isExpanded) {
-                                return App.Theme.secondary
+                                return Color.Theme.secondary
                             } else {
                                 return "transparent"
                             }
@@ -155,7 +156,7 @@ Window {
                         Text {
                             id: iconText
                             text: modelData.text
-                            color: App.Theme.lightNeutral
+                            color: Color.Theme.lightNeutral
                             visible: sideBar.isExpanded
                             anchors.verticalCenter: parent.verticalCenter
                         }
@@ -190,7 +191,7 @@ Window {
                         }
                         onClicked: {
                             sideBar.selectedItem = modelData.text
-                            appArea.loadPage(modelData.text)
+                            loadPage(modelData.text)
                             print(modelData.text + " clicked")
                         }
                     }
@@ -206,7 +207,7 @@ Window {
         anchors.top: parent.top
         height: 30
         width: parent.width
-        color: App.Theme.primary
+        color: Color.Theme.primary
     }
 
     Rectangle {
@@ -215,35 +216,32 @@ Window {
         anchors.top: topBar.bottom
         height: parent.height - topBar.height + 10
         width: parent.width - sideBar.width + 10
-        color: App.Theme.lightNeutral
+        color: Color.Theme.lightNeutral
         radius: 10 // Added rounded corners
         Loader {
             id: pageLoader
-            anchors.left: sideBar.right
-            anchors.top: topBar.bottom
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            source: "qrc:/Apps/Contacts.qml"
+            anchors.fill: parent
+            sourceComponent: App.Contacts
         }
 
         function loadPage(page) {
             switch (page) {
                 case "Contacts":
-                    pageLoader.source = "qrc:/Apps/Contacts.qml"
+                    pageLoader.sourceComponent = App.Contacts
                     break
                 case "Companies":
-                    pageLoader.source = "qrc:/Apps/Companies.qml"
+                    pageLoader.sourceComponent = App.Companies
                     break
                 case "Tickets":
-                    pageLoader.source = "qrc:/Apps/Tickets.qml"
+                    pageLoader.sourceComponent = App.Tickets
                     break
                 case "Reports":
-                    pageLoader.source = "qrc:/Apps/Reports.qml"
+                    pageLoader.sourceComponent = App.Reports
                     break
                 default:
                     console.log("Unknown page:", page)
-                    pageLoader.source = "qrc:/Apps/Contacts.qml" // Or set to a default page
-                }
+                    pageLoader.sourceComponent = App.Contacts // Or set to a default page
+            }
         }
     }
 }

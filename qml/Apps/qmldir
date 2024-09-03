@@ -1,0 +1,5 @@
+module Apps
+Companies 1.0 Companies.qml
+Contacts 1.0 Contacts.qml
+Tickets 1.0 Tickets.qml
+Reports 1.0 Reports.qml

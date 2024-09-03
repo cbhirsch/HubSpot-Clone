@@ -10,13 +10,13 @@ import resources_rc
 CURRENT_DIR = Path(__file__).resolve().parent
 print(CURRENT_DIR)
 
-THEME_DIR = CURRENT_DIR / "qml" 
-print(THEME_DIR)
+LIBRARY_DIR = CURRENT_DIR / "qml" 
+print(LIBRARY_DIR)
 
 def main():
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
-    engine.addImportPath(os.fspath(THEME_DIR))
+    engine.addImportPath(os.fspath(LIBRARY_DIR))
     url = QUrl.fromLocalFile(os.fspath(CURRENT_DIR / "main.qml"))
     #engine.load(url)
 
