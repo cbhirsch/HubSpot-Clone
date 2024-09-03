@@ -2,6 +2,7 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
+    id: root
     readonly property color primary: "#005A8C"
     readonly property color secondary: "#00C2E0"
     readonly property color accent: "#FFD700"
