@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 2.15
+import QtQuick.Shapes 1.15
 import Themes 1.0 as Color  
 import Apps 1.0 as App
 
@@ -18,23 +19,7 @@ Window {
         color: Color.Theme.primary
         height: parent.height
         width: isExpanded ? 150 : 50
-        z: 1 // Set z index higher to overlap appArea
-
-        // Opacity mask rectangle
-        OpacityMask {
-            id: cutoutMask
-            anchors.right: parent.right
-            anchors.top: parent.top
-            height: parent.height
-            width: 50 // Adjust width as needed for the cutout
-
-            source: Rectangle {
-                anchors.fill: parent
-                color: "white" // Use white for the mask
-                radius: 10 // Set radius for the top left corner
-                opacity: 1 // Fully opaque for the mask
-            }
-        }
+        clip: true
 
         property bool isExpanded: false
         property string selectedItem: ""
@@ -45,6 +30,8 @@ Window {
         Behavior on width {
             NumberAnimation { duration: 200 }
         }
+
+        
 
         Timer {
             id: hoverTimer
@@ -227,14 +214,34 @@ Window {
         color: Color.Theme.primary
     }
 
-    Rectangle {
-        id: appArea
+    Shape {
+        id: innerFillet
         anchors.left: sideBar.right
         anchors.top: topBar.bottom
-        height: parent.height - topBar.height + 10
-        width: parent.width - sideBar.width +10
+        width: 20
+        height: 20
+
+        ShapePath {
+            fillColor: Color.Theme.primary
+            strokeColor: Color.Theme.primary
+            strokeWidth: 1
+
+            PathMove { x: 0; y: 20 }
+            PathArc { x: 20; y: 0; radiusX: 20; radiusY: 20 }
+            PathLine { x: 0; y: 0 }
+            PathLine { x: 0; y: 20 }
+        }
+    }
+
+    Rectangle {
+        id: appArea
+        z:-1
+        anchors.left: Window.right
+        x: 50
+        anchors.top: topBar.bottom
+        height: parent.height - 40
+        width: parent.width - 40
         color: Color.Theme.lightNeutral
-        radius: 10 // Added rounded corners
         StackLayout {
             id: pageStack
             anchors.fill: parent

@@ -5,7 +5,6 @@ import Themes 1.0 as Color
 
 Rectangle {
     color: Color.Theme.lightNeutral  // Changed background color to lightNeutral
-    radius: 10
     
     ColumnLayout {
         anchors.fill: parent
