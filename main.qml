@@ -105,13 +105,13 @@ Window {
             }
             Rectangle {
                 id: displayLine
-                width: sideBar.width - 30
+                width: sideBar.width - 25
                 height: 1
                 color: Color.Theme.accent
-                anchors.left: parent.left
-                anchors.top: crmDisplay.bottom
-                anchors.leftMargin: 12
-                anchors.topMargin: 10
+                // Remove anchors and use Layout properties
+                Layout.alignment: Qt.AlignLeft | Qt.AlignTop // Align to the left and top
+                Layout.topMargin: 10 // Keep the margin if needed
+                Layout.leftMargin: 10 // Keep the margin if needed
             }
             
 
@@ -191,7 +191,7 @@ Window {
                         }
                         onClicked: {
                             sideBar.selectedItem = modelData.text
-                            loadPage(modelData.text)
+                            appArea.loadPage(modelData.text)
                             print(modelData.text + " clicked")
                         }
                     }
@@ -218,29 +218,33 @@ Window {
         width: parent.width - sideBar.width + 10
         color: Color.Theme.lightNeutral
         radius: 10 // Added rounded corners
-        Loader {
-            id: pageLoader
+        StackLayout {
+            id: pageStack
             anchors.fill: parent
-            sourceComponent: App.Contacts
+            currentIndex: 0
+            App.Contacts {}
+            App.Companies {}
+            App.Tickets {}
+            App.Reports {}
         }
 
         function loadPage(page) {
             switch (page) {
                 case "Contacts":
-                    pageLoader.sourceComponent = App.Contacts
+                    pageStack.currentIndex = 0
                     break
                 case "Companies":
-                    pageLoader.sourceComponent = App.Companies
+                    pageStack.currentIndex = 1
                     break
                 case "Tickets":
-                    pageLoader.sourceComponent = App.Tickets
+                    pageStack.currentIndex = 2
                     break
                 case "Reports":
-                    pageLoader.sourceComponent = App.Reports
+                    pageStack.currentIndex = 3
                     break
                 default:
                     console.log("Unknown page:", page)
-                    pageLoader.sourceComponent = App.Contacts // Or set to a default page
+                    pageStack.currentIndex = 0 // Or set to a default page
             }
         }
     }
