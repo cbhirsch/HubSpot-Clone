@@ -18,6 +18,23 @@ Window {
         color: Color.Theme.primary
         height: parent.height
         width: isExpanded ? 150 : 50
+        z: 1 // Set z index higher to overlap appArea
+
+        // Opacity mask rectangle
+        OpacityMask {
+            id: cutoutMask
+            anchors.right: parent.right
+            anchors.top: parent.top
+            height: parent.height
+            width: 50 // Adjust width as needed for the cutout
+
+            source: Rectangle {
+                anchors.fill: parent
+                color: "white" // Use white for the mask
+                radius: 10 // Set radius for the top left corner
+                opacity: 1 // Fully opaque for the mask
+            }
+        }
 
         property bool isExpanded: false
         property string selectedItem: ""
@@ -215,7 +232,7 @@ Window {
         anchors.left: sideBar.right
         anchors.top: topBar.bottom
         height: parent.height - topBar.height + 10
-        width: parent.width - sideBar.width + 10
+        width: parent.width - sideBar.width +10
         color: Color.Theme.lightNeutral
         radius: 10 // Added rounded corners
         StackLayout {
