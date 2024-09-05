@@ -28,17 +28,21 @@ Rectangle {
         }
 
         // Table Section
-        Rectangle {
+        TableView {
+            id: companiesTable
             Layout.fillWidth: true
             Layout.fillHeight: true
-            color: Color.Theme.secondary
-            radius: 10
+            model: companiesModel  // Bind to your model
 
-            Text {
-                anchors.centerIn: parent
-                text: qsTr("Table content goes here")
-                font.pixelSize: 18
-                color: Color.Theme.darkNeutral
+            // Define the columns
+            delegate: Item {
+                width: companiesTable.width
+                height: 50
+                RowLayout {
+                    Text { text: model.name }  // Example column
+                    Text { text: model.create_date }  // Example column
+                    Text { text: model.last_activity }  // Example column
+                }
             }
         }
 
