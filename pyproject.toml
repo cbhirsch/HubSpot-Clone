@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "hubspotclone"
+version = "0.1.0"
+description = ""
+authors = ["Bryce <cbirsch859@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pyside6 = "^6.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

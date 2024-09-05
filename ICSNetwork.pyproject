@@ -2,11 +2,11 @@
     "files": [
         "main.py",
         "main.qml",
-        "Theme.qml",
+        "qml/Themes/Theme.qml",
         "resources.qrc",
-        "Apps/Companies.qml",
-        "Apps/Contacts.qml",
-        "Apps/Reports.qml",
-        "Apps/Tickets.qml"
+        "qml/Apps/Companies.qml",
+        "qml/Apps/Contacts.qml",
+        "qml/Apps/Reports.qml",
+        "qml/Apps/Tickets.qml"
     ]
 }

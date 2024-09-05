@@ -1,12 +1,14 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Layouts 2.15
-import Themes as App
+import QtQuick.Shapes 1.15
+import Themes 1.0 as Color  
+import Apps 1.0 as App
 
 Window {
     width: Screen.width
     height: Screen.height
-    color: App.Theme.primary
+    color: Color.Theme.primary
     visible: true
     title: qsTr("Demo")
 
@@ -14,9 +16,10 @@ Window {
         id: sideBar
         anchors.top: parent.top
         anchors.left: parent.left
-        color: App.Theme.primary
+        color: Color.Theme.primary
         height: parent.height
         width: isExpanded ? 150 : 50
+        clip: true
 
         property bool isExpanded: false
         property string selectedItem: ""
@@ -27,6 +30,8 @@ Window {
         Behavior on width {
             NumberAnimation { duration: 200 }
         }
+
+        
 
         Timer {
             id: hoverTimer
@@ -96,7 +101,7 @@ Window {
 
                     Text {
                         text: "CRM"
-                        color: App.Theme.lightNeutral
+                        color: Color.Theme.lightNeutral
                         visible: sideBar.isExpanded
                         anchors.verticalCenter: parent.verticalCenter
                     }
@@ -104,13 +109,13 @@ Window {
             }
             Rectangle {
                 id: displayLine
-                width: sideBar.width - 30
+                width: sideBar.width - 25
                 height: 1
-                color: App.Theme.accent
-                anchors.left: parent.left
-                anchors.top: crmDisplay.bottom
-                anchors.leftMargin: 12
-                anchors.topMargin: 10
+                color: Color.Theme.accent
+                // Remove anchors and use Layout properties
+                Layout.alignment: Qt.AlignLeft | Qt.AlignTop // Align to the left and top
+                Layout.topMargin: 10 // Keep the margin if needed
+                Layout.leftMargin: 10 // Keep the margin if needed
             }
             
 
@@ -131,9 +136,9 @@ Window {
                         anchors.fill: parent
                         color: {
                             if (modelData.text === sideBar.selectedItem) {
-                                return App.Theme.secondary
+                                return Color.Theme.secondary
                             } else if (itemMouseArea.containsMouse && sideBar.isExpanded) {
-                                return App.Theme.secondary
+                                return Color.Theme.secondary
                             } else {
                                 return "transparent"
                             }
@@ -155,7 +160,7 @@ Window {
                         Text {
                             id: iconText
                             text: modelData.text
-                            color: App.Theme.lightNeutral
+                            color: Color.Theme.lightNeutral
                             visible: sideBar.isExpanded
                             anchors.verticalCenter: parent.verticalCenter
                         }
@@ -206,44 +211,65 @@ Window {
         anchors.top: parent.top
         height: 30
         width: parent.width
-        color: App.Theme.primary
+        color: Color.Theme.primary
+    }
+
+    Shape {
+        id: innerFillet
+        anchors.left: sideBar.right
+        anchors.top: topBar.bottom
+        width: 20
+        height: 20
+
+        ShapePath {
+            fillColor: Color.Theme.primary
+            strokeColor: Color.Theme.primary
+            strokeWidth: 1
+
+            PathMove { x: 0; y: 20 }
+            PathArc { x: 20; y: 0; radiusX: 20; radiusY: 20 }
+            PathLine { x: 0; y: 0 }
+            PathLine { x: 0; y: 20 }
+        }
     }
 
     Rectangle {
         id: appArea
-        anchors.left: sideBar.right
+        z:-1
+        anchors.left: Window.right
+        x: 50
         anchors.top: topBar.bottom
-        height: parent.height - topBar.height + 10
-        width: parent.width - sideBar.width + 10
-        color: App.Theme.lightNeutral
-        radius: 10 // Added rounded corners
-        Loader {
-            id: pageLoader
-            anchors.left: sideBar.right
-            anchors.top: topBar.bottom
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            source: "qrc:/Apps/Contacts.qml"
+        height: parent.height - 40
+        width: parent.width - 40
+        color: Color.Theme.lightNeutral
+        StackLayout {
+            id: pageStack
+            anchors.fill: parent
+            currentIndex: 0
+            App.Contacts {}
+            App.Companies {}
+            App.Tickets {}
+            App.Reports {}
         }
 
         function loadPage(page) {
             switch (page) {
                 case "Contacts":
-                    pageLoader.source = "qrc:/Apps/Contacts.qml"
+                    pageStack.currentIndex = 0
                     break
                 case "Companies":
-                    pageLoader.source = "qrc:/Apps/Companies.qml"
+                    pageStack.currentIndex = 1
                     break
                 case "Tickets":
-                    pageLoader.source = "qrc:/Apps/Tickets.qml"
+                    pageStack.currentIndex = 2
                     break
                 case "Reports":
-                    pageLoader.source = "qrc:/Apps/Reports.qml"
+                    pageStack.currentIndex = 3
                     break
                 default:
                     console.log("Unknown page:", page)
-                    pageLoader.source = "qrc:/Apps/Contacts.qml" // Or set to a default page
-                }
+                    pageStack.currentIndex = 0 // Or set to a default page
+            }
         }
     }
 }

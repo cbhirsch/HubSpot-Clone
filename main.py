@@ -5,18 +5,34 @@ import sys
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import Qt, QUrl, QCoreApplication
+from PySide6.QtSql import QSqlDatabase, QSqlQueryModel
 import resources_rc
 
 CURRENT_DIR = Path(__file__).resolve().parent
-print(CURRENT_DIR)
+LIBRARY_DIR = CURRENT_DIR / "qml" 
 
-THEME_DIR = CURRENT_DIR / "qml" 
-print(THEME_DIR)
+class CompaniesModel(QSqlQueryModel):
+    def __init__(self):
+        super().__init__()
+        self.setQuery("SELECT * FROM companies")
+
 
 def main():
     app = QGuiApplication(sys.argv)
+
+    # Set up the database connection
+    #db = QSqlDatabase.addDatabase("QSQLITE")
+    #db.setDatabaseName("placeholder")
+    #if not db.open():
+    #     print("Error: connection with the database failed.")
+    #     sys.exit(-1)
+    
+    # Create and expose the model  
+    #companies_model = CompaniesModel()
+    
     engine = QQmlApplicationEngine()
-    engine.addImportPath(os.fspath(THEME_DIR))
+    engine.addImportPath(os.fspath(LIBRARY_DIR))
+    #engine.rootContext().setContextProperty("companiesModel", CompaniesModel)
     url = QUrl.fromLocalFile(os.fspath(CURRENT_DIR / "main.qml"))
     #engine.load(url)
 
