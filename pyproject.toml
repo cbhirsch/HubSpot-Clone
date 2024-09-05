@@ -8,6 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
 pyside6 = "^6.7.2"
+pandas = "^2.2.2"
+faker = "^28.4.1"
+datetime = "^5.5"
 
 
 [build-system]
