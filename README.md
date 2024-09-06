@@ -15,8 +15,11 @@ This project is a clone of Hubspot CRM. The end project will have a few custom f
 
 2. Install dependencies (if any):
    ```bash
-   pip install -r requirements.txt
+   poetry update
    ```
 
 ## Usage
 run the main.py file
+```bash
+   python main.py
+   ```
