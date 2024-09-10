@@ -1,0 +1,101 @@
+id,name,email,phone,company_name,lead_status,LIFECYCLE_STAGE
+83810,Patrick Sanchez,jillrhodes@example.net,296-500-1338,"Santos, Gardner and Robinson",closed-lost,new
+77236,Sean Blake,helenpeterson@example.org,651.216.1559,"Stevens, Martinez and Nielsen",new,closed-lost
+10328,Sandra Montgomery,barbara10@example.net,441.731.6475,Clark-Adams,qualified,contacted
+89593,Lisa Jackson,frankgray@example.net,001-783-550-3056x413,"Porter, Wilkerson and Day",contacted,contacted
+18726,David Hoffman,julie69@example.com,(332)887-1012x269,Carlson-Mcdonald,closed-lost,new
+32953,Shannon Smith,maldonadoamanda@example.com,001-551-446-2704x82814,Farmer-Ryan,closed-lost,closed-lost
+69514,Linda Burns,hickmannatasha@example.com,403.491.1718,"Alvarez, Pierce and Baker",closed-won,new
+79507,Daniel Ryan,jenniferross@example.net,+1-557-587-1331x5098,Jones Ltd,closed-won,opportunity
+7716,Taylor Heath,palmerjoshua@example.com,582.399.7376,Hopkins LLC,new,new
+55519,Scott Brown,brownjessica@example.org,933.587.2624,Ramos PLC,new,contacted
+12833,Zachary Huff,housemelinda@example.org,(977)436-0260x64746,Phillips Inc,contacted,closed-won
+75914,Amy Edwards,silvawesley@example.net,(808)312-1913,"Sanchez, Wheeler and Harvey",closed-won,new
+54948,Krystal Stewart,james53@example.com,(524)675-1079x9118,Mahoney Inc,closed-won,contacted
+32018,Christopher Bass,cheryl80@example.net,+1-641-624-1182,"Clark, Cooper and Watts",closed-lost,closed-lost
+34600,Danielle Odonnell,davisrodney@example.com,2053242786,Landry Ltd,closed-lost,closed-won
+19536,Sandra Aguilar,russellwilliams@example.com,4535315869,Cherry and Sons,opportunity,contacted
+54040,Norman Cook,vpham@example.org,521-260-7337x543,"Lee, Murphy and Lin",opportunity,closed-won
+36585,Jordan Frazier,sheila14@example.org,001-340-819-6556,"Lee, Williams and Graham",qualified,new
+68146,Kimberly Ball,michaeljones@example.net,895-814-8465x64823,"Adkins, Thompson and Carroll",contacted,closed-lost
+53225,April Mitchell,mfloyd@example.net,577-673-8721x48951,Drake and Sons,opportunity,qualified
+3201,William Carr,gibsonolivia@example.net,567.463.2016,"Holmes, Williams and Wright",qualified,contacted
+15906,Robert Contreras,stephanie79@example.net,968.372.7743x48734,"Mitchell, Nelson and Flores",contacted,qualified
+70798,Chris Reyes,jasminebrown@example.com,787-660-3669x09670,Castaneda-Ashley,new,new
+54921,Morgan Marsh,tracynelson@example.com,2658627298,"Elliott, Johnson and Day",opportunity,new
+17786,Catherine Green,jason55@example.com,264-517-0805x310,Combs PLC,qualified,qualified
+19973,John Wilson,stevenscott@example.com,(699)812-4190,David-Gonzalez,closed-won,qualified
+77607,Lori Garcia,melissa91@example.net,8589651850,Hamilton LLC,new,closed-lost
+83307,Julia Hernandez,jessicasheppard@example.com,+1-587-976-9453x147,"Bishop, Gray and Johnson",opportunity,closed-won
+42600,Daniel Salinas,joshua94@example.net,9839136783,Mcguire-Davis,new,opportunity
+29045,David Beck,thomas85@example.com,001-485-557-4443x1351,Rodgers LLC,new,closed-won
+94972,Paige Carlson,wallkenneth@example.com,(640)482-4008,"Oneill, Henry and Salas",qualified,closed-lost
+75243,John Peterson,kingmichelle@example.org,667-319-0229,Wilson Group,closed-won,qualified
+79471,Lisa Rowe,chayes@example.com,001-564-699-0913,"Miller, Allen and Arnold",closed-won,contacted
+20517,Jerry Wheeler,antonio44@example.net,413.349.3618x324,Martin LLC,closed-lost,new
+77993,Laura Roberts,harrisonkevin@example.com,288-377-1906x594,Hayden PLC,new,closed-lost
+76955,Yvonne Chambers,barbara27@example.net,+1-374-429-6717x5655,Jenkins-Simpson,contacted,qualified
+86846,Robin Pierce,qmiller@example.com,768-908-7603,"Ramos, Williams and Adams",new,contacted
+17172,Jessica Wolfe,johnsoncrystal@example.org,001-424-980-8613x171,"Carter, Thornton and Perry",new,opportunity
+63242,Mrs. Kristen Reyes,michellehill@example.com,784-804-4997x27875,Cantu-Kane,qualified,opportunity
+91422,James Chase,vwilliams@example.com,001-366-927-0289x517,Bowen Group,closed-lost,qualified
+85823,Angela Harrington,matthew61@example.com,+1-386-357-8091x34316,Jackson-Evans,contacted,qualified
+3794,Robert Carter,ryan38@example.com,001-922-421-9693,Murray LLC,qualified,contacted
+60236,Adam Ballard,erica21@example.com,(894)764-7436x713,"Phillips, Lyons and Johnson",closed-lost,qualified
+86275,Adam Grimes,lozanojulie@example.com,001-739-453-3942x10470,Browning LLC,closed-lost,closed-lost
+97973,Curtis Buchanan,alyssa42@example.com,245.617.1236x8516,"Martinez, Richardson and Curry",closed-lost,new
+34362,Samantha Bentley,leonardthomas@example.net,+1-459-231-7461,Torres Group,closed-won,closed-lost
+15220,Stephen Taylor,vwatson@example.net,+1-669-226-1796,"Wood, Ramos and Sampson",contacted,closed-won
+47537,Michael Stephens,bruce43@example.org,513.590.0532x931,Murphy and Sons,closed-lost,contacted
+78116,Scott Thomas,amberlindsey@example.org,+1-302-305-3950x24026,West-Cox,contacted,opportunity
+77812,Jonathan Dougherty,acostaregina@example.net,447.300.7661x77115,Hill Ltd,opportunity,qualified
+76724,Erika Vang,shawn96@example.org,001-318-736-7365x766,Edwards-Scott,closed-lost,closed-lost
+20006,Kara Davis,daviscolin@example.net,(228)609-8851x656,"Edwards, Garcia and Romero",closed-won,contacted
+20280,Courtney Rodriguez,danny49@example.org,(289)498-0940x24455,Knight Group,closed-lost,qualified
+9120,Mark Johnson,nicholaschavez@example.org,(645)999-1022x901,"Coleman, Lawson and Perry",new,contacted
+28255,Ashley Jordan,erika97@example.net,+1-740-336-9003x43244,Jimenez Group,new,qualified
+23028,Joseph Hall,charles06@example.org,715.496.9664x160,"Stevens, Norris and Cox",opportunity,qualified
+57240,Dana Chapman,fosterkyle@example.com,752.718.1883,"Mullen, Brewer and Hernandez",new,contacted
+13474,Craig Morrison,thompsonkendra@example.com,999.679.9552x717,Vargas-Bell,closed-won,closed-lost
+9724,Jesse Brown,chase19@example.net,267.998.0793x59782,Shepherd LLC,qualified,contacted
+93626,Matthew Williams,hritter@example.net,+1-725-354-6659x051,"Gregory, Mitchell and Cummings",closed-lost,opportunity
+86057,Lindsey Hernandez,aguilardonald@example.com,762-291-4865x2816,Parker-Bean,opportunity,closed-lost
+44791,Katelyn Perez,ericphillips@example.org,988.205.9296x22292,Diaz-Ball,opportunity,contacted
+58222,Nicole Bowers,amandacollins@example.com,859.477.4688,Solis and Sons,qualified,contacted
+32768,John Watson,dawsonzachary@example.org,812-247-8261x3750,Shaw-Young,contacted,closed-lost
+10696,Alfred Galvan,lacey20@example.com,827.379.0104x3289,Young-Martinez,closed-won,closed-won
+31252,Riley Bryant,copelandvincent@example.net,7895324609,"Butler, Beck and Miller",qualified,closed-lost
+47265,Joseph Romero,myerstheodore@example.net,(754)705-1531x9520,"Thompson, Maxwell and Marshall",closed-won,opportunity
+91146,Clarence Taylor,mjohnson@example.org,205.548.6874,Kelly-Norman,closed-won,opportunity
+85948,Caleb Richardson,ypaul@example.com,(877)458-4161,"Carter, Garcia and Murphy",qualified,contacted
+38750,Lance Simmons,cbell@example.net,(996)240-1658x202,Jones Ltd,contacted,closed-won
+48015,Travis Johnson,erikarush@example.com,419.928.5654x310,"Hughes, Hoffman and Green",opportunity,new
+34116,Cindy Carr,igonzalez@example.org,427.715.5188x442,"Walker, Galloway and Conner",new,new
+31029,Allison Spencer,tanner82@example.net,314-467-8669,Day-Cole,contacted,closed-lost
+89143,Bethany Calderon,katrinaanderson@example.net,7186242253,King Ltd,contacted,closed-lost
+72199,Mario Mendez,shawgary@example.net,(229)695-9001,"Clark, Armstrong and Montgomery",opportunity,closed-won
+3969,Mr. Dylan Frye MD,eevans@example.net,4277677359,"Flores, Travis and Reed",new,opportunity
+52260,Jacob Hoffman,john14@example.com,421.704.6963,"Griffith, Lee and Moore",opportunity,closed-won
+67466,Shawn Jimenez,landrywilliam@example.org,695.200.4797,Jordan LLC,opportunity,closed-won
+95355,Jamie Williams,hudsonjames@example.net,716-787-8499x1216,"Mcmillan, Fischer and Gonzalez",qualified,closed-won
+66731,Andrew Williams,linda87@example.org,+1-982-659-5269x495,Cabrera-Richardson,new,closed-lost
+88317,Jason Parker,carlsonjoseph@example.net,001-399-530-9728x96230,Alexander Group,closed-lost,new
+19848,Damon Shaw,vsalas@example.net,7284385786,Barr-Peterson,closed-lost,closed-won
+46437,Sharon Becker,chelsea33@example.com,+1-743-644-3757,Martinez-Rhodes,qualified,closed-lost
+49767,Jennifer Reed,kellyroberts@example.net,657-447-3384,Gilbert PLC,qualified,new
+31363,Michael Schmidt,briangutierrez@example.net,212.308.2677x3454,"Andrews, Nichols and Sharp",qualified,opportunity
+4888,Carrie Khan,sarahjohnson@example.com,924.400.4991x5478,"Mcdonald, Lee and Rodriguez",contacted,opportunity
+21298,Mariah Higgins,doylekrystal@example.net,+1-732-596-6851x61227,Green and Sons,new,closed-lost
+58554,Tiffany Turner,greenmichael@example.org,6177426841,"Walker, Bernard and Mendoza",closed-lost,qualified
+59634,Lisa Perry,ztodd@example.net,339.218.7851,"Leach, Harris and Herrera",closed-won,contacted
+21566,Joseph Wilson,jenniferburns@example.net,207.828.6790x874,Velasquez-Reese,closed-won,new
+75800,Jeff Graves,michaelcesar@example.com,8468226567,Vega Ltd,closed-lost,qualified
+70687,Scott Wilson,urice@example.org,5049786863,Moore-Lopez,closed-lost,closed-won
+95030,Amanda Keller,allencarlos@example.net,5792030673,Gordon LLC,closed-won,contacted
+30692,Monique Flores,joel28@example.org,(744)808-9268x70568,Hernandez-Bennett,contacted,qualified
+98882,Daisy Perez,lindamelendez@example.net,(568)282-6343x51751,Bennett-Jacobs,contacted,closed-won
+5183,Chelsea Gill,timothybooth@example.com,603-831-7393x6385,Ferguson-Howard,closed-won,new
+34283,Stephen Owens,ugill@example.org,(856)609-3204x899,Gonzalez and Sons,closed-won,qualified
+49786,Danielle Pierce,jonathan77@example.com,(252)328-7280,"Williams, Smith and Taylor",opportunity,new
+82667,Michael Smith,nbrooks@example.net,+1-697-270-0886x00848,"Li, Craig and Drake",new,qualified
+23496,Brent Hernandez,christineking@example.com,361-856-7933x410,Bennett-Alvarez,qualified,contacted

@@ -22,6 +22,7 @@ Rectangle {
         RowLayout {
             spacing: 10
             // Add filter components here
+            Text { text: qsTr("id") }
             Text { text: qsTr("Ticket Owner") }
             Text { text: qsTr("Create Date") }
             Text { text: qsTr("Last Activity Date") }

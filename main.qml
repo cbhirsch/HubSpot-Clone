@@ -10,7 +10,7 @@ Window {
     height: Screen.height
     color: Color.Theme.primary
     visible: true
-    title: qsTr("Demo")
+    title: qsTr("HubSpot Clone")
 
     Rectangle {
         id: sideBar
