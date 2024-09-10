@@ -48,10 +48,14 @@ def main():
     app = QGuiApplication(sys.argv)
 
     # Load data from CSV
-    df = pd.read_csv("companies_data.csv")
+    df_companies = pd.read_csv("companies_data.csv")
+    df_contacts = pd.read_csv("contacts_data.csv")
+    df_tickets = pd.read_csv("tickets_data.csv")
 
     # Create and expose the model
-    companies_model = PandasModel(df)
+    companies_model = PandasModel(df_companies)
+    contacts_model = PandasModel(df_contacts)
+    tickets_model = PandasModel(df_tickets)
 
     # Set up the database connection
     #db = QSqlDatabase.addDatabase("QSQLITE")
@@ -66,6 +70,8 @@ def main():
     engine = QQmlApplicationEngine()
     engine.addImportPath(os.fspath(LIBRARY_DIR))
     engine.rootContext().setContextProperty("companiesModel", companies_model)
+    engine.rootContext().setContextProperty("contactsModel", contacts_model)
+    engine.rootContext().setContextProperty("ticketsModel", tickets_model)
     #engine.rootContext().setContextProperty("companiesModel", CompaniesModel)
     url = QUrl.fromLocalFile(os.fspath(CURRENT_DIR / "main.qml"))
     #engine.load(url)
