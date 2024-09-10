@@ -241,7 +241,7 @@ Window {
         anchors.top: topBar.bottom
         height: parent.height - 40
         width: parent.width - 40
-        color: Color.Theme.lightNeutral
+        color: Color.Theme.background
         StackLayout {
             id: pageStack
             anchors.fill: parent

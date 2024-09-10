@@ -1,101 +1,101 @@
-id,name,create_date,last_activity,active_tickets,industry,employee_count,revenue
-83810,Johnson LLC,2021-10-04,2023-11-30,20,Healthcare,410,796333790
-18289,"Garcia, Yang and Gardner",2023-04-07,2023-09-17,8,Education,3658,149927706
-3905,Robinson PLC,2019-11-26,2024-04-09,3,Transportation,1425,634136506
-26062,"Santos, Gardner and Robinson",2022-01-16,2024-07-15,13,Technology,489,100704502
-851,Wolfe LLC,2022-01-15,2023-11-04,6,Education,8280,646512689
-28221,Garcia-James,2022-09-24,2024-07-30,0,Transportation,3258,768920204
-45082,"Baker, Williams and Stevens",2020-09-26,2024-08-28,20,Transportation,6874,236796312
-49615,Arnold Ltd,2022-10-02,2024-04-16,14,Entertainment,4558,869219330
-25203,"Jones, Stanley and Mejia",2020-05-09,2024-08-02,0,Finance,6925,365441213
-30512,James Group,2022-10-12,2023-11-07,8,Finance,3528,819895579
-48520,Clark-Adams,2020-04-13,2024-04-28,10,Healthcare,1520,408043839
-83227,Ferguson and Sons,2021-01-24,2024-03-02,3,Retail,5636,648345888
-49735,Mayo-Bowman,2024-05-31,2023-11-29,8,Technology,7528,575870529
-89733,Cameron-Parsons,2021-08-16,2024-07-20,3,Agriculture,1292,592849116
-4207,Morales-Jones,2024-07-02,2024-08-10,9,Entertainment,5926,620027151
-94098,Lewis-Porter,2023-07-31,2023-10-30,6,Healthcare,751,710126086
-34718,Wright PLC,2024-04-05,2023-12-16,7,Manufacturing,1308,918490409
-97912,"Patterson, Silva and Cox",2020-11-07,2024-03-20,7,Healthcare,6228,298571886
-64686,Campos Inc,2020-12-22,2024-05-05,14,Retail,2665,397578786
-20969,"Henderson, Brown and James",2023-08-29,2024-03-28,11,Education,4375,753673823
-32953,"Valencia, Smith and Le",2024-03-30,2024-06-22,20,Healthcare,9981,681902744
-34973,"Peterson, Carter and Moore",2019-09-15,2024-06-11,5,Transportation,4011,175552091
-94329,Stanton-Gill,2023-12-30,2024-08-24,14,Agriculture,4423,993731208
-13947,"Evans, Fowler and Lynch",2020-12-22,2024-01-28,20,Transportation,3599,735198955
-99943,Ryan PLC,2019-09-06,2024-04-24,10,Technology,3753,882503818
-42487,Smith-Hickman,2022-04-17,2023-12-06,1,Retail,6573,287584583
-7592,Humphrey Inc,2020-05-28,2024-06-15,2,Education,9293,941092571
-63699,Spence PLC,2020-09-29,2023-10-24,10,Education,8180,424906516
-86474,Arroyo-Martin,2024-03-01,2024-08-08,20,Energy,2341,284512919
-79507,Brandt-Hickman,2021-05-21,2024-06-07,4,Education,9198,578822458
-40857,Carney-Santos,2023-05-28,2024-08-19,8,Entertainment,7020,964129981
-67839,Martinez-Walker,2022-07-21,2023-09-13,18,Agriculture,5931,235593870
-77110,"Hall, Robinson and Jones",2020-03-05,2023-12-02,4,Transportation,8086,97713238
-8834,Heath Inc,2024-01-19,2023-12-06,1,Healthcare,2505,673815057
-36500,"Washington, Ryan and Cummings",2024-07-14,2024-04-15,5,Agriculture,9772,68312356
-61953,Mueller Group,2021-04-18,2023-10-11,12,Agriculture,9764,502664736
-12704,"Jordan, Henderson and Owens",2020-02-20,2024-05-23,16,Manufacturing,9065,924355163
-85649,"Garcia, Powell and Morgan",2020-08-09,2023-12-10,0,Healthcare,8798,806348900
-25112,Herrera and Sons,2023-04-07,2023-11-15,8,Retail,1828,315243362
-36509,Wright-Leblanc,2023-06-12,2024-07-14,13,Finance,7434,3584630
-72132,Williams PLC,2019-10-20,2023-10-11,8,Transportation,2928,545219047
-98771,Martin Group,2023-10-09,2023-11-27,3,Manufacturing,8318,653976785
-52565,Martin Inc,2022-12-30,2023-12-16,6,Finance,6127,818839736
-59638,Henderson-Bernard,2024-05-27,2024-05-19,5,Transportation,8690,986324887
-94163,Moore-Phillips,2020-03-04,2024-04-16,0,Entertainment,5311,524736385
-96434,"Brown, Edwards and Williams",2023-09-25,2024-03-18,0,Healthcare,5948,943620428
-69615,Brown PLC,2020-05-10,2024-07-31,9,Education,950,258733898
-24356,Larson Ltd,2021-09-04,2024-02-08,18,Healthcare,1404,785979795
-15713,"Sanchez, Wheeler and Harvey",2023-03-30,2024-05-17,15,Healthcare,8728,822408461
-76503,"Mills, Donovan and Harris",2022-05-08,2023-12-06,4,Finance,7788,590447116
-34814,Anderson-Brewer,2023-07-26,2024-01-05,5,Manufacturing,8646,936867846
-98548,Smith PLC,2024-06-19,2023-10-13,19,Agriculture,3471,997513271
-9602,"Lewis, Baker and Mahoney",2020-04-05,2024-08-11,17,Education,5108,428514718
-32018,Mitchell-Kim,2024-04-18,2024-06-04,20,Retail,7178,966053266
-39651,"Riggs, Roman and Rice",2024-05-24,2023-12-30,16,Energy,1983,266286631
-86951,Mcmillan and Sons,2021-12-04,2023-10-19,7,Healthcare,5540,22685366
-14029,"Tran, Nelson and Jacobs",2022-08-05,2023-11-23,18,Transportation,3771,631932764
-90111,"Farrell, Wagner and King",2020-02-09,2023-10-10,7,Technology,1164,760138427
-83136,Calderon-Williams,2022-07-07,2024-06-30,20,Technology,3751,72470545
-17146,"Whitney, Martin and Ramos",2023-04-25,2024-04-09,1,Retail,1161,552170932
-1267,Jones Ltd,2020-12-11,2024-04-03,7,Manufacturing,7954,230135022
-4722,Aguilar-Hernandez,2020-10-04,2023-09-21,17,Finance,9356,618802544
-40404,Nolan-Flynn,2020-01-06,2024-08-19,15,Education,7750,867143303
-46898,Fleming Ltd,2020-07-20,2024-01-20,13,Education,1546,104178666
-73385,Dickson-Brady,2021-09-09,2024-08-05,13,Retail,6940,441517711
-21299,Keith Inc,2021-03-15,2024-06-17,14,Technology,1613,65182363
-43540,Pham-Shields,2021-10-15,2023-12-17,12,Retail,1791,267092705
-20866,"Rodriguez, Brennan and Garrison",2021-07-27,2023-11-21,6,Education,8787,481795135
-60332,Torres-Pope,2021-08-12,2023-11-30,4,Agriculture,3007,299185574
-3101,"Lee, Murphy and Lin",2022-01-19,2024-01-19,14,Education,1236,475908013
-84080,"Ross, Zavala and Herrera",2019-11-29,2023-10-19,17,Healthcare,829,700335246
-34237,Carpenter LLC,2020-01-01,2023-10-17,17,Technology,1529,994778970
-78193,Reed-Hartman,2023-05-22,2024-04-27,7,Finance,6659,521553189
-67033,Cruz PLC,2021-04-17,2023-12-12,15,Education,6571,969090653
-5817,"Graham, Meyer and Drake",2021-05-09,2024-01-24,1,Finance,6210,2414313
-56531,Rush LLC,2022-05-07,2024-05-19,12,Manufacturing,7455,306384028
-16334,"Mccullough, Hunter and Estrada",2022-06-14,2024-02-08,13,Transportation,7974,166311829
-91384,Spencer-Lee,2022-11-25,2024-05-25,6,Manufacturing,3567,62895957
-98059,Gilbert LLC,2023-02-17,2024-04-04,18,Transportation,999,803232646
-53,Mitchell-Jordan,2024-08-10,2024-04-27,10,Technology,822,627355918
-85813,Marshall-Ramos,2021-06-29,2024-03-21,15,Transportation,8702,169142105
-62021,"Jackson, Miller and Robertson",2022-07-12,2023-10-11,1,Transportation,1313,914222100
-98453,Chambers and Sons,2021-05-15,2023-11-01,5,Healthcare,9750,73072420
-3201,Sanchez Group,2020-04-18,2024-02-28,7,Agriculture,1965,956038726
-54321,"Johnston, Higgins and Cruz",2023-01-28,2023-12-08,18,Education,9486,638460085
-19342,"Watts, Stafford and Dalton",2020-08-01,2024-07-03,1,Entertainment,1344,450239320
-55724,Thompson Ltd,2024-01-31,2024-03-03,18,Entertainment,8566,339799535
-6582,"Wright, Charles and Bryant",2023-08-18,2024-05-21,8,Education,5148,256387095
-69616,"Larson, Dodson and Vance",2023-12-21,2024-02-17,8,Agriculture,2145,721321887
-71810,Merritt-Manning,2023-09-18,2024-02-26,20,Manufacturing,7492,339592674
-33972,Larsen LLC,2024-02-10,2024-03-11,2,Technology,7509,667064667
-82149,Hill Inc,2022-02-08,2023-12-05,18,Healthcare,1201,577380546
-35614,Flores-Fernandez,2020-11-07,2023-11-02,6,Transportation,4346,142324154
-30311,Benson-Mccarthy,2020-03-22,2024-02-13,11,Healthcare,4003,396876692
-53424,Daniels-Perry,2021-06-08,2024-07-24,9,Finance,7180,895326828
-55069,Stein-Silva,2019-11-04,2024-08-02,17,Manufacturing,8667,8499996
-75456,Woods-Bender,2022-03-20,2024-06-23,17,Manufacturing,1698,942981649
-51116,Medina-Navarro,2021-07-21,2024-03-12,4,Manufacturing,1892,955421749
-28760,Graham-Johnson,2022-07-15,2024-05-21,3,Transportation,2547,292531670
-89016,Ramsey-Pittman,2020-10-05,2024-05-03,9,Entertainment,3451,770630217
+Company name,create_date,Phone number,Last activity,City,Country,industry,employee_count,revenue
+"Rodriguez, Figueroa and Sanchez",2020-11-16,001-218-519-6001x3389,2024-06-14,Robinsonshire,Fiji,Healthcare,410,796333790
+Blake and Sons,2023-04-15,942-335-1161x55940,2024-09-02,Millerport,Switzerland,Manufacturing,4013,239770711
+"Montgomery, Hensley and Ray",2020-04-13,7344131647,2024-01-31,Jasonview,Reunion,Finance,1680,726700539
+"Wong, Lynch and Jackson",2021-10-09,(276)748-3503,2024-02-12,Carlshire,Turkey,Transportation,1425,634136506
+"Edwards, Rios and Foster",2023-08-05,(842)738-8496,2023-12-04,New Trevor,Saudi Arabia,Agriculture,521,32094523
+Callahan and Sons,2021-01-19,+1-669-716-6978x48018,2023-10-23,Ryanmouth,Afghanistan,Healthcare,3583,249917734
+"Liu, Baker and Mason",2021-03-18,914.289.3252x88095,2023-10-23,Natashaport,Dominican Republic,Transportation,9864,28592780
+Allen PLC,2020-05-11,671-882-2782,2023-12-01,Lake Larry,Paraguay,Transportation,3258,768920204
+"Brooks, Lam and Hayes",2021-10-19,215.309.8393,2024-06-10,East Carloston,Tokelau,Transportation,6874,236796312
+Jones-Young,2023-10-27,582.399.7376,2023-10-17,Gomezchester,Lao People's Democratic Republic,Energy,9655,298804996
+"Brown, Valdez and Lucas",2020-03-16,(551)333-3872x6247,2024-02-29,North Deniseside,Taiwan,Technology,2616,749721470
+Novak and Sons,2021-02-07,(977)436-0260x64746,2023-11-22,Jeffton,Mozambique,Agriculture,5575,298462082
+"Daniels, Adkins and Brown",2024-08-28,388.520.8121x9136,2024-04-21,New Christophershire,Mongolia,Finance,3528,819895579
+"Stewart, Green and Santiago",2022-05-13,946.324.7510,2023-10-08,New Joseph,Venezuela,Retail,1675,99685092
+Ibarra-Suarez,2022-11-01,327-384-9808x4124,2024-06-24,West Juan,Cote d'Ivoire,Agriculture,1585,385551171
+"Cooper, Watts and Farrell",2023-12-28,840.216.4005x2427,2023-10-23,Lake Rebeccaside,Argentina,Retail,9892,284127113
+Aguilar-Hernandez,2020-10-09,8454053315,2024-09-03,Port Francisco,South Georgia and the South Sandwich Islands,Technology,7528,575870529
+Keith Inc,2021-03-20,001-756-634-2160x7337,2024-07-24,East Andrew,Congo,Healthcare,6202,84711066
+Murphy-Lin,2022-01-24,(386)885-0142x940,2024-01-22,Samuelhaven,Brazil,Transportation,4804,890666476
+Lam-Lee,2020-01-25,001-360-688-3561x595,2024-03-24,Elizabethmouth,Iraq,Entertainment,5926,620027151
+"Phillips, Martinez and Fisher",2022-11-30,+1-729-994-6804x43699,2024-02-28,Lowehaven,Lebanon,Education,1140,49303558
+"Jackson, Miller and Robertson",2022-07-17,934-333-2003,2024-03-04,Mercadoshire,Congo,Education,4742,85775980
+"Horton, Snyder and Sanchez",2019-09-27,001-716-932-8708x31727,2024-05-04,Rivasside,Kiribati,Education,1655,408257429
+Manning Group,2023-07-09,734-787-3471x434,2024-08-21,East Edwardfurt,Puerto Rico,Manufacturing,7429,682660971
+Mccarthy Inc,2023-03-21,(258)776-0366x90967,2024-01-03,Castanedachester,Mauritania,Retail,2665,397578786
+"Navarro, Marsh and Hurst",2023-11-04,946.470.6562,2024-05-08,South Brittanytown,Belize,Retail,3433,719695113
+"Patterson, Camacho and White",2021-11-26,(253)775-5646x4170,2023-12-06,Port Susanton,Saudi Arabia,Manufacturing,1170,654149436
+Herring and Sons,2019-11-12,+1-323-427-1937x452,2024-01-08,New Anthonyport,Morocco,Finance,8752,782993941
+"Odonnell, Brooks and David",2021-05-18,793-814-9190,2024-05-23,Caseymouth,American Samoa,Education,2678,496448124
+Short-Garcia,2022-10-09,+1-672-762-8498x7769,2024-08-05,Port Sarah,Fiji,Agriculture,4423,993731208
+Sanchez-Marshall,2022-11-30,207-552-7354x54948,2023-10-13,Lake Richard,Moldova,Transportation,3599,735198955
+Vaughn Ltd,2023-11-12,701.843.6349x578,2024-06-25,Michaelmouth,Faroe Islands,Retail,917,246038494
+King-Martinez,2021-04-30,618-523-3749x89413,2024-01-28,West Alexis,Martinique,Technology,5169,430847414
+Hill Inc,2024-05-25,627-910-9477x7520,2023-10-24,South Travisshire,Norfolk Island,Manufacturing,1085,226641099
+"Brown, Hernandez and Hart",2022-04-10,831-986-9993,2024-08-27,Evansshire,Japan,Entertainment,5156,228406011
+Carroll-Brown,2020-07-14,001-933-641-2328x12067,2023-09-22,West Jasmine,Reunion,Energy,6483,950021299
+Jones-Hall,2021-12-09,+1-693-661-8324x2102,2024-02-27,South Haleyfurt,Western Sahara,Energy,2341,284512919
+Mason-Snyder,2020-05-16,+1-606-259-4013x990,2024-07-02,South April,Kenya,Finance,4041,800025830
+White-Richards,2023-11-15,875-965-5125,2023-12-30,Cervantesside,Argentina,Transportation,8831,282216655
+Miller-King,2020-09-04,001-268-508-7603x85977,2023-12-22,West Samuel,Qatar,Entertainment,7020,964129981
+Martinez-Dudley,2021-09-22,001-424-980-8613x171,2024-09-06,Williamview,Israel,Entertainment,6544,388790725
+Baird-Sanchez,2024-05-18,(763)698-2146,2024-07-24,West Jessicashire,Mozambique,Education,2267,547199690
+"Burns, Hernandez and Ryan",2022-08-17,988-867-5339x63605,2024-02-06,South Tammie,Brunei Darussalam,Energy,1490,811614914
+"Sanford, Rivera and Garcia",2023-06-08,687-702-6217,2024-05-09,Santosmouth,Timor-Leste,Technology,1797,164212119
+"Villarreal, James and Stewart",2023-11-04,+1-309-313-4316,2024-02-29,Lake Kevin,Antarctica (the territory South of 60 deg S),Finance,6917,640489325
+Nguyen Inc,2022-03-09,(856)523-8692x221,2024-03-21,East Steven,Equatorial Guinea,Healthcare,6305,409860584
+Scott-Smith,2023-08-25,882-917-5946x4743,2023-10-21,South Ashley,Morocco,Entertainment,7669,568232202
+Haney-Phillips,2023-01-21,609-409-7439x533,2024-05-10,Lake Debbieport,Solomon Islands,Manufacturing,9065,924355163
+Johnson-Diaz,2020-10-22,645-462-3285,2023-12-18,Coffeyport,San Marino,Technology,1877,732080933
+Brock-Mcdonald,2020-04-30,(336)985-1604,2024-01-31,Brendastad,Botswana,Transportation,4372,825376600
+"Hall, Johnson and Henson",2024-06-19,393-517-4612x00471,2024-08-19,South Shawn,Paraguay,Retail,1828,315243362
+"Horton, Fernandez and Matthews",2021-01-02,(717)796-4053x77351,2023-10-03,Hillville,Yemen,Agriculture,2592,487282120
+Davis-Lewis,2019-11-15,5535293183,2024-01-15,Port Rachel,Afghanistan,Technology,4316,537600247
+Garrison-Thomas,2020-10-17,+1-742-210-2053,2023-11-16,Brianchester,Malta,Finance,8318,980026683
+Reese Group,2023-07-03,001-258-991-7839x08470,2024-08-04,Simmonsville,Liechtenstein,Healthcare,4890,903835581
+"Browning, Jones and Miller",2020-12-13,624-999-8569,2024-03-24,Garciaville,Timor-Leste,Transportation,9978,213679170
+"Curtis, Mack and Le",2021-07-09,(473)965-7661x56545,2023-10-06,Port Christopherchester,Bhutan,Finance,6127,818839736
+"Rodgers, Cain and Hawkins",2024-09-05,+1-685-716-5604,2023-10-20,East Diane,Czech Republic,Finance,8838,836143811
+Bell PLC,2022-10-25,249-636-8998,2023-09-21,West Jacqueline,Georgia,Transportation,10,643211853
+Bell-White,2020-11-28,001-861-920-1836,2024-01-20,West Larry,Greece,Retail,8006,21012992
+"Carlson, Ware and Moore",2020-02-11,+1-814-376-7976x43815,2023-12-29,Roseport,Aruba,Healthcare,5948,943620428
+Foster PLC,2020-02-27,2349324451,2024-06-26,Thompsonfurt,Martinique,Manufacturing,3924,62296678
+"Hall, Hansen and Barnett",2022-09-14,860-860-7159,2024-06-11,Robertsfurt,Angola,Education,9296,84664737
+Jackson-Meza,2023-08-09,001-651-761-3696x816,2023-12-05,Kimberlyland,Malawi,Healthcare,7963,876298296
+"Wilson, Hicks and Bullock",2022-08-30,(923)912-4329x212,2024-06-28,Maldonadoshire,Norway,Healthcare,8728,822408461
+"Downs, Morris and Maddox",2022-05-19,(771)377-4490,2024-01-08,Hayeston,Heard Island and McDonald Islands,Finance,2104,708502051
+Jones-Lin,2020-06-16,+1-998-467-9807x935,2023-10-04,Garciamouth,Rwanda,Energy,9008,177403722
+Wagner and Sons,2020-01-09,677.888.9255,2024-02-15,Erikaton,Somalia,Manufacturing,8646,936867846
+"Holland, Jones and Davis",2022-12-24,349-625-1925x4629,2024-04-14,Schneidermouth,Suriname,Entertainment,6933,227516584
+Santiago Ltd,2024-03-02,768-950-5423,2023-11-23,East Eric,French Polynesia,Transportation,3296,765623129
+Romero PLC,2024-03-02,4599296222,2023-09-26,Diazbury,Kenya,Manufacturing,6538,721318382
+"Mitchell, Goodman and Cole",2024-03-26,847.835.9774,2023-11-11,Port Cassandra,Tunisia,Retail,7178,966053266
+Williams-Castillo,2022-11-06,+1-418-814-1247,2023-10-15,Port Shannon,Guernsey,Transportation,7398,130027269
+Perry Group,2023-12-17,(236)615-3051x522,2024-08-31,Hortonberg,Senegal,Education,3682,68847287
+"Harrison, Gilbert and Bullock",2019-11-08,232-589-8614x341,2024-02-20,Brownfort,Nepal,Retail,345,631791672
+"Smith, Robertson and Allen",2020-11-29,260-895-3962x1851,2024-08-14,Williamsfurt,Holy See (Vatican City State),Transportation,3771,631932764
+Burgess-Kelly,2020-04-06,(931)495-2058x527,2024-07-21,North Jennifer,Western Sahara,Education,118,76328245
+Johnson-Harris,2021-05-21,5546868740,2024-01-26,Port Dianaview,British Virgin Islands,Technology,3751,72470545
+Kim-Ross,2023-06-07,(452)677-5841x6169,2024-01-12,North Markport,Gambia,Technology,5414,76182500
+Morrison-Simmons,2023-06-20,(470)259-6401x658,2023-11-04,Johnsonland,Dominica,Transportation,3900,299112686
+"Diaz, Reyes and Bradley",2020-12-29,+1-375-257-1928x56543,2024-06-21,South April,United States Minor Outlying Islands,Energy,3511,579098028
+"Wilson, Hampton and Padilla",2021-07-07,+1-747-331-2172x715,2024-04-10,Patriciaburgh,Rwanda,Finance,9356,618802544
+"Ho, Little and Leon",2024-01-07,713.923.7058,2024-07-18,New Nicole,Bahrain,Energy,3982,842578695
+Sanders-Love,2023-10-06,466.491.2517x78528,2024-02-25,Port Davidberg,Gabon,Energy,6670,204551095
+Martin Ltd,2021-08-10,(384)414-3842x498,2024-04-26,East Donna,Saint Helena,Healthcare,1589,707677342
+"Morgan, Bradshaw and Williams",2019-12-07,909-643-9690,2024-05-16,Timothyfurt,French Southern Territories,Agriculture,5805,454914084
+Jones-Brown,2023-06-06,(377)735-9255x56258,2023-12-12,Martinezmouth,Egypt,Agriculture,7652,927637643
+Davis LLC,2022-12-16,+1-963-625-9532x787,2024-03-21,North Sierrahaven,Kuwait,Technology,1613,65182363
+Lewis LLC,2020-02-08,8474974801,2024-08-17,Jessicafurt,Haiti,Agriculture,5560,859729660
+Morales PLC,2024-06-20,658.341.6878,2023-10-29,South Nathanielmouth,Moldova,Healthcare,4074,205818272
+Fischer-Gonzalez,2024-01-08,(480)700-2578x7298,2024-09-05,Franciscoport,Nauru,Education,8787,481795135
+Romero-Hicks,2023-11-09,001-994-670-5516x940,2024-05-21,Lake Brett,Lesotho,Finance,6913,197118781
+Warren Ltd,2022-12-04,(830)491-3075,2024-02-17,South Warren,New Zealand,Manufacturing,7580,268327631
+Salas-Fitzgerald,2020-03-21,001-728-738-5786x527,2024-05-29,Chelseaborough,Egypt,Healthcare,7261,867707278
+Grant-Walker,2022-03-22,001-843-775-7584x41986,2024-07-06,West Bobby,Zimbabwe,Transportation,1605,54418806
+"Miller, Bradshaw and Douglas",2023-10-07,538.548.4219,2023-09-29,Lake Jesse,Bolivia,Transportation,242,100240141
+Rivera-Kennedy,2020-11-10,6822677345,2024-08-27,Lake Audreyside,Saint Vincent and the Grenadines,Education,2725,436483774
+"Jefferson, Johnson and Dorsey",2023-03-31,(306)772-4004,2023-12-29,Haysside,Malta,Energy,7887,229609408
+Small-Anderson,2023-12-24,543.415.2742x054,2024-05-04,Wilcoxhaven,Greece,Agriculture,961,176877762
+Morales Inc,2021-04-06,(675)730-4637,2024-01-05,West Desireebury,Bahamas,Agriculture,36,419312169

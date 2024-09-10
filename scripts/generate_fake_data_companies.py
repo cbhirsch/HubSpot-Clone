@@ -20,11 +20,12 @@ def generate_company_data(num_companies=100):
     companies = []
     for _ in range(num_companies):
         company = {
-            'id': fake.unique.random_number(digits=5),
-            'name': fake.company(),
+            'Company name': fake.company(),
             'create_date': fake.date_between(start_date='-5y', end_date='today'),
-            'last_activity': fake.date_between(start_date='-1y', end_date='today'),
-            'active_tickets': random.randint(0, 20),
+            'Phone number': fake.phone_number(),
+            'Last activity': fake.date_between(start_date='-1y', end_date='today'),
+            'City': fake.city(),
+            'Country': fake.country(),
             'industry': random.choice(industries),
             'employee_count': random.randint(1, 10000),
             'revenue': random.randint(100000, 1000000000)
