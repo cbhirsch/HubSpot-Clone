@@ -42,6 +42,17 @@ class PandasModel(QAbstractTableModel):
                 return str(self._data.index[section])
         return None
 
+    def setData(self, index, value, role):
+        if role == Qt.EditRole:
+            self._data.iloc[index.row(), index.column()] = value
+            self.dataChanged.emit(index, index, [role])
+            # Here you would typically update your database
+            return True
+        return False
+
+    def flags(self, index):
+        return Qt.ItemIsEditable | Qt.ItemIsEnabled | Qt.ItemIsSelectable
+
 
 
 def main():

@@ -4,8 +4,11 @@ import QtQuick.Controls 2.15
 import Themes 1.0 as Color
 
 Rectangle {
+    id: root
     color: Color.Theme.lightNeutral
     
+    property int hoveredRow: -1
+
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 20
@@ -46,10 +49,31 @@ Rectangle {
                 implicitHeight: 40
                 border.width: 1
                 border.color: Color.Theme.accent
+                color: row === root.hoveredRow ? Color.Theme.lightNeutral : Color.Theme.background
 
-                Text {
-                    anchors.centerIn: parent
+                TextInput {
+                    id: cellInput
+                    anchors.fill: parent
                     text: display
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    selectByMouse: true
+                    color: Color.Theme.darkNeutral
+                    
+                    onEditingFinished: {
+                        if (text !== display) {
+                            companiesModel.setData(tableView.model.index(row, column), text, Qt.EditRole)
+                        }
+                    }
+                }
+
+                MouseArea {
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    cursorShape: Qt.IBeamCursor
+                    onEntered: root.hoveredRow = row
+                    onExited: root.hoveredRow = -1
+                    onPressed: cellInput.forceActiveFocus()
                 }
             }
 
