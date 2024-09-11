@@ -9,144 +9,163 @@ Rectangle {
     
     property int hoveredRow: -1
 
-    ColumnLayout {
+    ScrollView {
+        id: mainScrollView
         anchors.fill: parent
-        anchors.topMargin: 40
         anchors.margins: 20
-        spacing: 0 // Set spacing to 0 to remove gaps between items
+        clip: true
+        ScrollBar.vertical.policy: ScrollBar.AlwaysOn
 
-        // Title Section
-        Text {
-            text: qsTr("Companies")
-            font.pixelSize: 24
-            color: Color.Theme.darkNeutral
-            Layout.alignment: Qt.AlignTop
-        }
+        ColumnLayout {
+            width: mainScrollView.width - mainScrollView.ScrollBar.vertical.width - 20 // Subtract scrollbar width and add right margin
+            spacing: 20
 
-        // Filters Section
-        RowLayout {
-            spacing: 10
-            Text { text: qsTr("Create Date") }
-            Text { text: qsTr("Last Activity") }
-            Text { text: qsTr("Active Tickets") }
-        }
-
-        // Table Section
-        Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            HorizontalHeaderView {
-                id: horizontalHeader
-                syncView: tableView
-                width: parent.width
-                height: 40 // Set a fixed height for the header
-                anchors.top: parent.top
-                model: ["Company name", "Create Date", "Phone number", "Last activity", "City", "Country", "Industry", "Employee count", "Revenue"]
-                
-                delegate: Rectangle {
-                    implicitWidth: 200
-                    implicitHeight: 40
-                    border.width: 1
-                    border.color: Color.Theme.tableBorder
-                    color: Color.Theme.lightNeutral
-
-                    Text {
-                        anchors.fill: parent
-                        text: modelData
-                        verticalAlignment: Text.AlignVCenter
-                        horizontalAlignment: Text.AlignHCenter
-                        color: Color.Theme.darkNeutral
-                        font.bold: true
-                    }
-                }
+            // Title Section
+            Text {
+                text: qsTr("Companies")
+                font.pixelSize: 24
+                color: Color.Theme.darkNeutral
+                Layout.alignment: Qt.AlignTop
             }
 
-            TableView {
-                id: tableView
-                anchors.top: horizontalHeader.bottom
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.bottom: parent.bottom
-                model: companiesModel
+            // Filters Section
+            RowLayout {
+                spacing: 10
+                Text { text: qsTr("Create Date") }
+                Text { text: qsTr("Last Activity") }
+                Text { text: qsTr("Active Tickets") }
+            }
+
+            // Table Section
+            Rectangle {
+                Layout.fillWidth: true
+                Layout.preferredHeight: Math.min(400, tableView.contentHeight + horizontalHeader.height)
+                color: "transparent"
                 clip: true
 
-                property int editingRow: -1
-                property int editingColumn: -1
+                HorizontalHeaderView {
+                    id: horizontalHeader
+                    syncView: tableView
+                    width: parent.width
+                    height: 40 // Set a fixed height for the header
+                    anchors.top: parent.top
+                    model: ["Company name", "Create Date", "Phone number", "Last activity", "City", "Country", "Industry", "Employee count", "Revenue"]
+                    
+                    delegate: Rectangle {
+                        implicitWidth: 200
+                        implicitHeight: 40
+                        border.width: 1
+                        border.color: Color.Theme.tableBorder
+                        color: Color.Theme.lightNeutral
 
-                delegate: Rectangle {
-                    implicitWidth: 250
-                    implicitHeight: 40
-                    border.width: 1
-                    border.color: Color.Theme.tableBorder
-                    color: row === root.hoveredRow ? Color.Theme.lightNeutral : Color.Theme.background
-
-                    Loader {
-                        id: contentLoader
-                        anchors.fill: parent
-                        anchors.leftMargin: 5
-                        anchors.rightMargin: 5
-
-                        sourceComponent: (row === tableView.editingRow && column === tableView.editingColumn) ? editComponent : displayComponent
-
-                        Component {
-                            id: displayComponent
-                            Text {
-                                text: display
-                                verticalAlignment: Text.AlignVCenter
-                                horizontalAlignment: Text.AlignLeft
-                                elide: Text.ElideRight
-                                color: Color.Theme.darkNeutral
-                            }
+                        Text {
+                            anchors.fill: parent
+                            text: modelData
+                            verticalAlignment: Text.AlignVCenter
+                            horizontalAlignment: Text.AlignHCenter
+                            color: Color.Theme.darkNeutral
+                            font.bold: true
                         }
+                    }
+                }
 
-                        Component {
-                            id: editComponent
-                            TextInput {
-                                text: display
-                                verticalAlignment: Text.AlignVCenter
-                                horizontalAlignment: Text.AlignLeft
-                                color: Color.Theme.darkNeutral
-                                selectByMouse: true
+                ScrollView {
+                    anchors.top: horizontalHeader.bottom
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.bottom: parent.bottom
+                    clip: true
 
-                                onEditingFinished: {
-                                    if (text !== display) {
-                                        companiesModel.setData(tableView.model.index(row, column), text, Qt.EditRole)
+                    ScrollBar.horizontal.policy: ScrollBar.AlwaysOn
+                    ScrollBar.vertical.policy: ScrollBar.AlwaysOn
+
+                    TableView {
+                        id: tableView
+                        anchors.top: horizontalHeader.bottom
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        anchors.bottom: parent.bottom
+                        model: companiesModel
+                        clip: true
+
+                        property int editingRow: -1
+                        property int editingColumn: -1
+
+                        delegate: Rectangle {
+                            implicitWidth: 250
+                            implicitHeight: 40
+                            border.width: 1
+                            border.color: Color.Theme.tableBorder
+                            color: row === root.hoveredRow ? Color.Theme.lightNeutral : Color.Theme.background
+
+                            Loader {
+                                id: contentLoader
+                                anchors.fill: parent
+                                anchors.leftMargin: 5
+                                anchors.rightMargin: 5
+
+                                sourceComponent: (row === tableView.editingRow && column === tableView.editingColumn) ? editComponent : displayComponent
+
+                                Component {
+                                    id: displayComponent
+                                    Text {
+                                        text: display
+                                        verticalAlignment: Text.AlignVCenter
+                                        horizontalAlignment: Text.AlignLeft
+                                        elide: Text.ElideRight
+                                        color: Color.Theme.darkNeutral
                                     }
-                                    tableView.editingRow = -1
-                                    tableView.editingColumn = -1
                                 }
 
-                                Component.onCompleted: forceActiveFocus()
+                                Component {
+                                    id: editComponent
+                                    TextInput {
+                                        text: display
+                                        verticalAlignment: Text.AlignVCenter
+                                        horizontalAlignment: Text.AlignLeft
+                                        color: Color.Theme.darkNeutral
+                                        selectByMouse: true
+
+                                        onEditingFinished: {
+                                            if (text !== display) {
+                                                companiesModel.setData(tableView.model.index(row, column), text, Qt.EditRole)
+                                            }
+                                            tableView.editingRow = -1
+                                            tableView.editingColumn = -1
+                                        }
+
+                                        Component.onCompleted: forceActiveFocus()
+                                    }
+                                }
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                hoverEnabled: true
+                                cursorShape: Qt.IBeamCursor
+                                onEntered: root.hoveredRow = row
+                                onExited: root.hoveredRow = -1
+                                onDoubleClicked: {
+                                    tableView.editingRow = row
+                                    tableView.editingColumn = column
+                                }
                             }
                         }
-                    }
 
-                    MouseArea {
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.IBeamCursor
-                        onEntered: root.hoveredRow = row
-                        onExited: root.hoveredRow = -1
-                        onDoubleClicked: {
-                            tableView.editingRow = row
-                            tableView.editingColumn = column
+                        columnWidthProvider: function (column) {
+                            return horizontalHeader.delegate.implicitWidth
                         }
                     }
                 }
-
-                columnWidthProvider: function (column) {
-                    return horizontalHeader.delegate.implicitWidth
-                }
             }
-        }
 
-        // Table Navigation Section
-        RowLayout {
-            spacing: 10
-            // Add navigation components here
-            Button { text: qsTr("Previous") }
-            Button { text: qsTr("Next") }
+            // Table Navigation Section
+            RowLayout {
+                spacing: 10
+                // Add navigation components here
+                Button { text: qsTr("Previous") }
+                Button { text: qsTr("Next") }
+            }
         }
     }
 }
