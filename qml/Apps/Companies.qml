@@ -38,10 +38,13 @@ Rectangle {
 
             // Table Section
             Rectangle {
+                id: tableContainer
                 Layout.fillWidth: true
-                Layout.preferredHeight: Math.min(400, tableView.contentHeight + horizontalHeader.height)
+                Layout.preferredHeight: contentHeight
                 color: "transparent"
                 clip: true
+
+                property int contentHeight: horizontalHeader.height + tableView.contentHeight
 
                 HorizontalHeaderView {
                     id: horizontalHeader
@@ -69,24 +72,37 @@ Rectangle {
                     }
                 }
 
-                ScrollView {
+                Item {
                     anchors.top: horizontalHeader.bottom
                     anchors.left: parent.left
                     anchors.right: parent.right
                     anchors.bottom: parent.bottom
                     clip: true
 
-                    ScrollBar.horizontal.policy: ScrollBar.AlwaysOn
-                    ScrollBar.vertical.policy: ScrollBar.AlwaysOn
-
                     TableView {
                         id: tableView
-                        anchors.top: horizontalHeader.bottom
-                        anchors.left: parent.left
-                        anchors.right: parent.right
-                        anchors.bottom: parent.bottom
+                        width: parent.width
+                        height: contentHeight
                         model: companiesModel
                         clip: true
+
+                        // Disable vertical scrolling
+                        boundsMovement: Flickable.StopAtBounds
+                        boundsBehavior: Flickable.StopAtBounds
+
+                        // Enable horizontal scrolling
+                        ScrollBar.horizontal: ScrollBar {
+                            policy: ScrollBar.AlwaysOn
+                        }
+
+                        // Propagate wheel events
+                        MouseArea {
+                            anchors.fill: parent
+                            acceptedButtons: Qt.NoButton
+                            onWheel: (wheel) => {
+                                wheel.accepted = false;
+                            }
+                        }
 
                         property int editingRow: -1
                         property int editingColumn: -1
