@@ -11,6 +11,8 @@ pyside6 = "^6.7.2"
 pandas = "^2.2.2"
 faker = "^28.4.1"
 datetime = "^5.5"
+django = "^5.1.1"
+psycopg2 = "^2.9.9"
 
 
 [build-system]
