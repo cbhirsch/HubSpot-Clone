@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import sys
 import pandas as pd
-
+import requests
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtCore import Qt, QUrl, QCoreApplication, QAbstractTableModel, QModelIndex
@@ -12,43 +12,30 @@ import resources_rc
 CURRENT_DIR = Path(__file__).resolve().parent
 LIBRARY_DIR = CURRENT_DIR / "qml" 
 
-class CompaniesModel(QSqlQueryModel):
+class CompaniesModel(QAbstractTableModel):
     def __init__(self):
         super().__init__()
-        self.setQuery("SELECT * FROM companies")
+        self.companies = self.fetch_companies()
 
-class PandasModel(QAbstractTableModel):
-    def __init__(self, data):
-        super().__init__()
-        self._data = data
+    def fetch_companies(self):
+        response = requests.get('http://localhost:8000/api/companies/')
+        return response.json()
 
-    def rowCount(self, parent=QModelIndex()):
-        return self._data.shape[0]
+    def rowCount(self, parent=None):
+        return len(self.companies)
 
-    def columnCount(self, parent=QModelIndex()):
-        return self._data.shape[1]
+    def columnCount(self, parent=None):
+        return len(self.companies[0]) if self.companies else 0
 
     def data(self, index, role):
         if role == Qt.DisplayRole:
-            value = self._data.iloc[index.row(), index.column()]
-            return str(value)
+            return list(self.companies[index.row()].values())[index.column()]
         return None
 
     def headerData(self, section, orientation, role):
-        if role == Qt.DisplayRole:
-            if orientation == Qt.Horizontal:
-                return str(self._data.columns[section])
-            if orientation == Qt.Vertical:
-                return str(self._data.index[section])
+        if role == Qt.DisplayRole and orientation == Qt.Horizontal:
+            return list(self.companies[0].keys())[section]
         return None
-
-    def setData(self, index, value, role):
-        if role == Qt.EditRole:
-            self._data.iloc[index.row(), index.column()] = value
-            self.dataChanged.emit(index, index, [role])
-            # Here you would typically update your database
-            return True
-        return False
 
     def flags(self, index):
         return Qt.ItemIsEditable | Qt.ItemIsEnabled | Qt.ItemIsSelectable
@@ -64,7 +51,7 @@ def main():
     df_tickets = pd.read_csv("tickets_data.csv")
 
     # Create and expose the model
-    companies_model = PandasModel(df_companies)
+    companies_model = CompaniesModel()
     contacts_model = PandasModel(df_contacts)
     tickets_model = PandasModel(df_tickets)
 
